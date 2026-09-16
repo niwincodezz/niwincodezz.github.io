@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        /* NAVBAR */
+        nav {
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8%;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        nav h2 {
+            color: #2563eb;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 10%;
+            gap: 50px;
+        }
+
+        .intro {
+            flex: 1;
+        }
+
+        .intro h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .intro h1 span {
+            color: #2563eb;
+        }
+
+        .intro h3 {
+            font-size: 25px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .intro p {
+            max-width: 600px;
+            line-height: 1.7;
+            color: #666;
+            font-size: 17px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            margin-right: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .secondary {
+            border: 2px solid #2563eb;
+            color: #2563eb;
+        }
+
+        /* PROFILE IMAGE */
+        .profile {
+            flex: 0.7;
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile img {
+            width: 320px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 8px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        /* INFORMATION SECTION */
+        .info-section {
+            padding: 70px 10%;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 45px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            padding: 30px;
+            border-radius: 15px;
+            background: #f5f7fb;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .card h3 {
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .card ul {
+            padding-left: 20px;
+            line-height: 2;
+            color: #555;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+            padding: 60px 10%;
+            background: #111827;
+            color: white;
+        }
+
+        .contact h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            margin: 8px;
+            color: #d1d5db;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0f172a;
+            color: #aaa;
+        }
+
+        /* MOBILE */
+        @media (max-width: 800px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 50px 7%;
+            }
+
+            .intro h1 {
+                font-size: 40px;
+            }
+
+            .intro p {
+                margin: auto;
+            }
+
+            .profile img {
+                width: 230px;
+                height: 230px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <h2>My Portfolio</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <!-- LEFT SIDE -->
+        <div class="intro">
+
+            <h1>Hello, I'm <span>Your Name</span></h1>
+
+            <h3>Computer Science Student & Problem Solver</h3>
+
+            <p>
+                I'm a passionate student interested in technology,
+                programming and creative problem solving. I enjoy
+                learning new things, building projects and exploring
+                how technology can solve real-world problems.
+            </p>
+
+            <div class="buttons">
+                <a href="#achievements" class="btn primary">
+                    View My Work
+                </a>
+
+                <a href="#contact" class="btn secondary">
+                    Contact Me
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE PHOTO -->
+        <div class="profile">
+
+            <!-- Replace profile.jpg with your photo -->
+            <img src="profile.jpg" alt="My Profile Photo">
+
+        </div>
+
+    </section>
+
+
+    <!-- BOTTOM INFORMATION -->
+    <section class="info-section" id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="cards">
+
+            <!-- QUALIFICATION -->
+            <div class="card">
+
+                <h3>🎓 Qualifications</h3>
+
+                <ul>
+                    <li>Bachelor's Degree in Computer Science</li>
+                    <li>College Name</li>
+                    <li>Year: 2026 - 2030</li>
+                    <li>Higher Secondary Education</li>
+                </ul>
+
+            </div>
+
+
+            <!-- ACHIEVEMENTS -->
+            <div class="card" id="achievements">
+
+                <h3>🏆 Achievements</h3>
+
+                <ul>
+                    <li>Participated in Hackathons</li>
+                    <li>Chess / Problem Solving</li>
+                    <li>Programming Competitions</li>
+                    <li>Academic Achievements</li>
+                </ul>
+
+            </div>
+
+
+            <!-- SKILLS -->
+            <div class="card">
+
+                <h3>💻 Skills</h3>
+
+                <ul>
+                    <li>Python</li>
+                    <li>HTML & CSS</li>
+                    <li>Problem Solving</li>
+                    <li>Communication</li>
+                    <li>Learning & Research</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <h2>Let's Connect</h2>
+
+        <p>Email: yourmail@example.com</p>
+
+        <p>LinkedIn: linkedin.com/in/yourname</p>
+
+        <p>GitHub: github.com/yourusername</p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Your Name. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
